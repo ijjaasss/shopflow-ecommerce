@@ -1,5 +1,10 @@
+import axios from "axios";
 
-
+async function abc(){
+const response=await axios.get("http://localhost:5000/api");
+console.log(response.data)
+}
+abc()
 function App() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
