@@ -72,7 +72,7 @@ const authSlice = createSlice({
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(register.fulfilled, (state, action: PayloadAction<ApiResponse>) => {
+      .addCase(register.fulfilled, (state) => {
         state.isLoading = false;
         state.error = null;
       })
