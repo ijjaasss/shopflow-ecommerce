@@ -8,12 +8,12 @@ import routes from './routes/index.js';
 const app = express();
 connectDB()
 
-// const options={
-//   origin: env.CLIENT_URL, 
-//   credentials: true              
-// }
+const options={
+  origin: env.CLIENT_URL, 
+  credentials: true              
+}
 
-app.use(cors());
+app.use(cors(options));
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
